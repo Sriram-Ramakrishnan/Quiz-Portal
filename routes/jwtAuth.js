@@ -2,9 +2,10 @@ const pool = require('../db');
 const bcrypt = require('bcrypt');
 const jwtGenerator = require('../utils/jwtGenerator');
 const router = require('express').Router();
+const validInfo = require('../middleware/validInfo');
 
 //register user:
-router.post("/register",async (req,res)=> {
+router.post("/register",validInfo,async (req,res)=> {
     try {
         const { name, email, password } = req.body;
         const user  = await pool.query("SELECT * FROM users WHERE user_email = $1", [email]);
@@ -29,7 +30,7 @@ router.post("/register",async (req,res)=> {
     }
 })
 
-router.post("/login",async (req,res)=> {
+router.post("/login",validInfo,async (req,res)=> {
     try {
         const { email, password } = req.body;
         const user  = await pool.query("SELECT * FROM users WHERE user_email = $1", [email]);
