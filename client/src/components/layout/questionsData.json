@@ -1,0 +1,374 @@
+[
+    [
+        {
+          "question": "What does CPU stand for?",
+          "image": null,
+          "answers": [
+            {
+              "id": 1,
+              "text": "Central Processing Unit"
+            },
+            {
+              "id": 2,
+              "text": "Computer Processing Unit"
+            },
+            {
+              "id": 3,
+              "text": "Central Power Unit"
+            },
+            {
+              "id": 4,
+              "text": "Computer Power Unit"
+            }
+          ]
+        },
+        {
+          "question": "What is the purpose of a firewall in a computer network?",
+          "image": null,
+          "answers": [
+            {
+              "id": 1,
+              "text": "To block unauthorized access to a network"
+            },
+            {
+              "id": 2,
+              "text": "To provide internet access to a network"
+            },
+            {
+              "id": 3,
+              "text": "To allow unrestricted access to a network"
+            },
+            {
+              "id": 4,
+              "text": "To encrypt data on a network"
+            }
+          ]
+        },
+        {
+          "question": "What is the difference between RAM and ROM?",
+          "image": null,
+          "answers": [
+            {
+              "id": 1,
+              "text": "RAM is volatile and temporary, while ROM is non-volatile and permanent"
+            },
+            {
+              "id": 2,
+              "text": "RAM is non-volatile and permanent, while ROM is volatile and temporary"
+            },
+            {
+              "id": 3,
+              "text": "RAM and ROM are both volatile and temporary"
+            },
+            {
+              "id": 4,
+              "text": "RAM and ROM are both non-volatile and permanent"
+            }
+          ]
+        },
+        {
+          "question": "What is the purpose of an operating system?",
+          "image": null,
+          "answers": [
+            {
+              "id": 1,
+              "text": "To manage hardware and software resources"
+            },
+            {
+              "id": 2,
+              "text": "To create and edit documents"
+            },
+            {
+              "id": 3,
+              "text": "To connect to the internet"
+            },
+            {
+              "id": 4,
+              "text": "To store and retrieve data"
+            }
+          ]
+        },
+        {
+          "question": "What is the difference between a LAN and a WAN?",
+          "image": null,
+          "answers": [
+            {
+              "id": 1,
+              "text": "A LAN is a local network that covers a small area, while a WAN is a wide area network that covers a larger geographic area"
+            },
+            {
+              "id": 2,
+              "text": "A WAN is a local network that covers a small area, while a LAN is a wide area network that covers a larger geographic area"
+            },
+            {
+              "id": 3,
+              "text": "A LAN and a WAN are the same thing"
+            },
+            {
+              "id": 4,
+              "text": "A LAN and a WAN are both types of wireless networks"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "question": "What is Ohm's law?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "V = IR"},
+            {"id": 2, "text": "I = V/R"},
+            {"id": 3, "text": "R = V/I"},
+            {"id": 4, "text": "V = I/R"}
+          ]
+        },
+        {
+          "question": "What is a transformer?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "A device that transfers electrical energy from one circuit to another"},
+            {"id": 2, "text": "A device that converts electrical energy into mechanical energy"},
+            {"id": 3, "text": "A device that converts mechanical energy into electrical energy"},
+            {"id": 4, "text": "A device that controls the flow of current in a circuit"}
+          ]
+        },
+        {
+          "question": "What is an electric motor?",
+          "image": "https://example.com/electric-motor.jpg",
+          "answers": [
+            {"id": 1, "text": "A device that converts electrical energy into mechanical energy"},
+            {"id": 2, "text": "A device that converts mechanical energy into electrical energy"},
+            {"id": 3, "text": "A device that controls the flow of current in a circuit"},
+            {"id": 4, "text": "A device that transfers electrical energy from one circuit to another"}
+          ]
+        },
+        {
+          "question": "What is a circuit breaker?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "A device that interrupts an electrical circuit to prevent damage from excess current"},
+            {"id": 2, "text": "A device that controls the flow of current in a circuit"},
+            {"id": 3, "text": "A device that converts electrical energy into mechanical energy"},
+            {"id": 4, "text": "A device that transfers electrical energy from one circuit to another"}
+          ]
+        }
+      ],
+      [
+        {
+          "question": "What is the main force that powers an internal combustion engine?",
+          "image": null,
+          "answers": [
+            {
+              "id": 1,
+              "text": "Electricity"
+            },
+            {
+              "id": 2,
+              "text": "Magnetism"
+            },
+            {
+              "id": 3,
+              "text": "Gasoline"
+            },
+            {
+              "id": 4,
+              "text": "Hydraulic fluid"
+            }
+          ]
+        },
+        {
+          "question": "Which type of gear is used to change the direction of rotation?",
+          "image": "https://example.com/gears.jpg",
+          "answers": [
+            {
+              "id": 1,
+              "text": "Spur gear"
+            },
+            {
+              "id": 2,
+              "text": "Bevel gear"
+            },
+            {
+              "id": 3,
+              "text": "Worm gear"
+            },
+            {
+              "id": 4,
+              "text": "Rack and pinion"
+            }
+          ]
+        },
+        {
+          "question": "What is the difference between a bearing and a bushing?",
+          "image": null,
+          "answers": [
+            {
+              "id": 1,
+              "text": "Bearings are made of metal, while bushings are made of plastic."
+            },
+            {
+              "id": 2,
+              "text": "Bearings are designed to handle radial loads, while bushings are designed to handle axial loads."
+            },
+            {
+              "id": 3,
+              "text": "Bearings have rolling elements, while bushings do not."
+            },
+            {
+              "id": 4,
+              "text": "Bearings are used in high-speed applications, while bushings are used in low-speed applications."
+            }
+          ]
+        },
+        {
+          "question": "What is the function of a camshaft?",
+          "image": "https://example.com/camshaft.jpg",
+          "answers": [
+            {
+              "id": 1,
+              "text": "To open and close the valves"
+            },
+            {
+              "id": 2,
+              "text": "To regulate the fuel flow"
+            },
+            {
+              "id": 3,
+              "text": "To control the ignition timing"
+            },
+            {
+              "id": 4,
+              "text": "To provide power to the alternator"
+            }
+          ]
+        },
+        {
+          "question": "What is the purpose of a clutch?",
+          "image": null,
+          "answers": [
+            {
+              "id": 1,
+              "text": "To shift gears"
+            },
+            {
+              "id": 2,
+              "text": "To engage and disengage the engine from the transmission"
+            },
+            {
+              "id": 3,
+              "text": "To provide power to the differential"
+            },
+            {
+              "id": 4,
+              "text": "To regulate the fuel flow"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "question": "What is the capital of France?",
+          "image": "https://example.com/paris.jpg",
+          "answers": [
+            {"id": 1, "text": "London"},
+            {"id": 2, "text": "Paris"},
+            {"id": 3, "text": "Berlin"},
+            {"id": 4, "text": "Madrid"}
+          ]
+        },
+        {
+          "question": "What is the largest planet in our solar system?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "Jupiter"},
+            {"id": 2, "text": "Mars"},
+            {"id": 3, "text": "Saturn"},
+            {"id": 4, "text": "Earth"}
+          ]
+        },
+        {
+          "question": "What is the tallest mammal?",
+          "image": "https://example.com/giraffe.jpg",
+          "answers": [
+            {"id": 1, "text": "Hippo"},
+            {"id": 2, "text": "Elephant"},
+            {"id": 3, "text": "Giraffe"},
+            {"id": 4, "text": "Lion"}
+          ]
+        },
+        {
+          "question": "Who wrote the novel 1984?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "George Orwell"},
+            {"id": 2, "text": "J.K. Rowling"},
+            {"id": 3, "text": "Jane Austen"},
+            {"id": 4, "text": "Stephen King"}
+          ]
+        },
+        {
+          "question": "What is the smallest continent by land area?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "Europe"},
+            {"id": 2, "text": "Africa"},
+            {"id": 3, "text": "Australia"},
+            {"id": 4, "text": "South America"}
+          ]
+        }
+      ]
+      ,
+      [
+        {
+          "question": "What is the capital of France?",
+          "image": "https://example.com/paris.jpg",
+          "answers": [
+            {"id": 1, "text": "London"},
+            {"id": 2, "text": "Paris"},
+            {"id": 3, "text": "Berlin"},
+            {"id": 4, "text": "Madrid"}
+          ]
+        },
+        {
+          "question": "What is the largest planet in our solar system?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "Jupiter"},
+            {"id": 2, "text": "Mars"},
+            {"id": 3, "text": "Saturn"},
+            {"id": 4, "text": "Earth"}
+          ]
+        },
+        {
+          "question": "What is the tallest mammal?",
+          "image": "https://example.com/giraffe.jpg",
+          "answers": [
+            {"id": 1, "text": "Hippo"},
+            {"id": 2, "text": "Elephant"},
+            {"id": 3, "text": "Giraffe"},
+            {"id": 4, "text": "Lion"}
+          ]
+        },
+        {
+          "question": "Who wrote the novel 1984?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "George Orwell"},
+            {"id": 2, "text": "J.K. Rowling"},
+            {"id": 3, "text": "Jane Austen"},
+            {"id": 4, "text": "Stephen King"}
+          ]
+        },
+        {
+          "question": "What is the smallest continent by land area?",
+          "image": null,
+          "answers": [
+            {"id": 1, "text": "Europe"},
+            {"id": 2, "text": "Africa"},
+            {"id": 3, "text": "Australia"},
+            {"id": 4, "text": "South America"}
+          ]
+        }
+      ]
+]
+  
