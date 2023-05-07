@@ -12,10 +12,10 @@ module.exports = async (req,res,next) => {
         //Will return a payload if verified:
 
         req.user = payload.user;
-        
-        
+        next();
     } catch (error) {
         console.error(error.message);
         return res.status(403).json("Not Authorized, Access denied");
     }
+   
 }

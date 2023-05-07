@@ -2,6 +2,7 @@ module.exports = function(req, res, next) {
     const { email, name, password } = req.body;
   
     function validEmail(userEmail) {
+        // Add regex for vit emails
       return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userEmail);
     }
   

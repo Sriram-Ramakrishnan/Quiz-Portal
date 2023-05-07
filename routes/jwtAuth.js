@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const jwtGenerator = require('../utils/jwtGenerator');
 const router = require('express').Router();
 const validInfo = require('../middleware/validInfo');
+const authorization = require('../middleware/authorization');
 
 //register user:
 router.post("/register",validInfo,async (req,res)=> {
@@ -30,6 +31,7 @@ router.post("/register",validInfo,async (req,res)=> {
     }
 })
 
+// Login user:
 router.post("/login",validInfo,async (req,res)=> {
     try {
         const { email, password } = req.body;
@@ -52,5 +54,14 @@ router.post("/login",validInfo,async (req,res)=> {
     }
 })
 
+router.get("/verify", authorization, async (req,res) =>{
+    try{
+        res.json(true);
+    }
+    catch (error){
+        console.error(error.message);
+        res.status(500).send("Server Error");
+    }
+});
 
 module.exports = router;

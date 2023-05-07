@@ -10,6 +10,7 @@ app.use(cors());
 // Routes:
 
 app.use('/auth', require('./routes/jwtAuth'));
+app.use('/dashboard', require("./routes/Dashboard"));
 
 // Listen Function:
 app.listen(5000, ()=>{
