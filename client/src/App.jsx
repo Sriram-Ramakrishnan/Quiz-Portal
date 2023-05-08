@@ -13,7 +13,7 @@ import Register from "./components/auth/Register";
 import Dashboard from "./components/layout/Dashboard";
 import Quiz from "./components/layout/Quiz/Quiz";
 import { AuthProvider } from './components/utils/auth';
-import { RequireAuth } from './components/utils/requireAuth';
+import { RequireAuth } from './components/utils/RequireAuth';
 import { useAuth } from './components/utils/auth';
 
 
