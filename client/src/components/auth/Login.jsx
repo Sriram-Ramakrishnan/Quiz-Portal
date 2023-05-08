@@ -17,9 +17,26 @@ const Login = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    auth.login(email,password);
-    console.log("Logged In Successfully");
-    navigate('/dashboard', {replace: true});
+    try {
+      const user = { email, password };
+      const body = JSON.stringify(user);
+      const response = await fetch('http://localhost:5000/auth/login',{
+          method: "POST",
+          headers: {'Content-Type':'application/json'},
+          body: body
+        });
+
+      const parseRes = await(response.json());
+      console.log(parseRes)
+      localStorage.setItem("token",parseRes.token);
+      auth.login(email,password);
+      console.log("Logged In Successfully");
+      navigate('/dashboard', {replace: true});
+
+    } catch (err) {
+      console.error(err.message);
+    }
+    
   };
   return (
     <Fragment>

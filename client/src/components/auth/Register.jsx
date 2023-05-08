@@ -1,8 +1,7 @@
 import React, { Fragment, useState } from "react";
-import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../utils/auth";
-
+import axios from 'axios'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -24,29 +23,31 @@ const Register = () => {
     if (password !== password2) {
       console.log("Passwords do not match");
     } else {
-      /* Using Axios to send a request and update it to the database */
-      // const newUser = {
-      //   name,
-      //   email,
-      //   password,
-      // };
+      try {
+        const newUser = {
+          name,
+          email,
+          password,
+        };
+        const body = JSON.stringify(newUser);
+        const response = await fetch('http://localhost:5000/auth/register',{
+            method: "POST",
+            headers: {
+              'Content-Type':'application/json'
+            },
+            body: body
+        });
+        const parseRes = await response.json();
+        console.log(parseRes);
 
-      // try {
-      //   const config = {
-      //     headers: {
-      //       'Content-Type':'application/json'
-      //     }
-      //   }
-
-      //   const body = JSON.stringify(newUser);
-      //   const res = await axios.post('/api/users',body,config);
-      //   console.log(res.data);
-      // } catch (err) {
-      //   console.error(err.response.data);
-      // }
-      auth.login(email,password);
-      navigate('/dashboard',{replace: true})
-      console.log("Registered Successfully");
+        localStorage.setItem("token",parseRes.token);
+        auth.login(email,password);
+        navigate('/dashboard',{replace: true})
+        console.log("Registered Successfully");
+      } catch (err) {
+        console.error(err.message);
+      }
+      
     }
   };
   return (
