@@ -1,5 +1,6 @@
 import {Fragment,useState} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../utils/auth";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -7,13 +8,18 @@ const Login = () => {
     password: "",
   });
 
+  const auth =  useAuth();
+  const navigate = useNavigate();
+
   const { email, password } = formData;
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    auth.login(email,password);
     console.log("Logged In Successfully");
+    navigate('/dashboard', {replace: true});
   };
   return (
     <Fragment>

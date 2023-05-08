@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from "react";
 import axios from 'axios'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../utils/auth";
+
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +11,9 @@ const Register = () => {
     password: "",
     password2: "",
   });
+
+  const auth =  useAuth();
+  const navigate = useNavigate();
 
   const { name, email, password, password2 } = formData;
   const onChange = (e) =>
@@ -39,8 +44,9 @@ const Register = () => {
       // } catch (err) {
       //   console.error(err.response.data);
       // }
+      auth.login(email,password);
+      navigate('/dashboard',{replace: true})
       console.log("Registered Successfully");
-
     }
   };
   return (

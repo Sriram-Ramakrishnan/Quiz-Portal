@@ -1,7 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../utils/auth'
 
 const Navbar = () => {
+
+  const navStyles  = ({isActive}) => {
+    return{
+      backgroundcolor: isActive? 'white' : 'black'
+    }
+  }
+
+  const auth = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    auth.logout();
+    navigate('/',{replace: true});
+  }
+
   return (
     <nav className="navbar bg-dark">
       <h1>
@@ -9,8 +24,9 @@ const Navbar = () => {
       </h1>
       <ul>
         <li><Link to='/dashboard'></Link></li>
-        <li><Link to="/register">Register</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        {!auth.user && <li><Link to="/register">Register</Link></li>}
+        {!auth.user && <li><Link to="/login">Login</Link></li>}
+        {auth.user && <li><button onClick={handleLogout}>Logout</button></li>} 
       </ul>
     </nav>
   )
