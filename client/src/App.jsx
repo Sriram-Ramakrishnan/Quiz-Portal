@@ -49,13 +49,13 @@ function App() {
     <Navbar />
     <Routes>
       <Route exact path="/" element={<Landing /> } />
-      <Route exact path="/dashboard" element={<RequireAuth><Dashboard/></RequireAuth>} />
+      <Route exact path="/dashboard" element={<Dashboard/>} />
     </Routes>
     <section className="container">
       <Routes>
         <Route exact path="/login" element={<Login />}/>
         <Route exact path="/register" element={<Register />} />
-        <Route exact path="/quiz" element={<RequireAuth><Quiz /></RequireAuth>} />
+        <Route exact path="/quiz" element={<Quiz />} />
       </Routes>
     </section>
     </Router>
