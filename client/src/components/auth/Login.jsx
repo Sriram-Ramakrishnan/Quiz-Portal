@@ -29,6 +29,7 @@ const Login = () => {
       const parseRes = await(response.json());
       console.log(parseRes)
       localStorage.setItem("token",parseRes.token);
+      localStorage.setItem("user_email",user.email);
       auth.login(email,password);
       console.log("Logged In Successfully");
       navigate('/dashboard', {replace: true});

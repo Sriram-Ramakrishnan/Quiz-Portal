@@ -41,6 +41,7 @@ const Register = () => {
         console.log(parseRes);
 
         localStorage.setItem("token",parseRes.token);
+        localStorage.setItem("user_email",user.email);
         auth.login(email,password);
         navigate('/dashboard',{replace: true})
         console.log("Registered Successfully");

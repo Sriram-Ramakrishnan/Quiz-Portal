@@ -40,16 +40,16 @@ router.post('/questions/:id', async (req, res) => {
   }
 });
   
-  // POST request to insert answers into the answers table
-  router.post('/answers', async (req, res) => {
-    const { answers } = req.body;
+  // PUT request to insert answers into the answers table
+  router.put('/answers', async (req, res) => {
+    const { email, answers } = req.body;
     try {
-      const query = {
-        text: 'INSERT INTO answers (answer) VALUES ($1)',
-        values: [JSON.stringify(answers)],
-      };
-      await pool.query(query);
-      res.status(200).send('Answers submitted successfully');
+      const user  = await pool.query("SELECT * FROM users WHERE user_email = $1", [email]);
+
+      if(user.rows.length === 0){
+          return res.status(401).send("Email or password is incorrect");
+      }
+      const answerQuery = await pool.query("UPDATE users SET answers = $1 WHERE user_email = $2 RETURNING *",[answers,email]);
     } catch (error) {
       console.error('Error inserting answers:', error);
       res.status(500).send('Error inserting answers into database');
