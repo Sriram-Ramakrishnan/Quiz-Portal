@@ -16,19 +16,19 @@ function Quiz() {
   return (
     <div className='quiz-page'>
       <div className='ques--page'>
-        <button onClick={() => handleClick(1)} className="btn btn-dark">CSE</button>
+        <button className="btn btn-dark">CSE</button>
         <SubQuiz questions={questions.slice(0,5)}/>
 
-        <button onClick={() => handleClick(2)} className="btn btn-dark">Electrical</button>
+        <button className="btn btn-dark">Electrical</button>
         <SubQuiz questions={questions.slice(5,7)}/>
 
-        <button onClick={() => handleClick(3)} className="btn btn-dark">Mechnanical</button>
+        <button className="btn btn-dark">Mechnanical</button>
         <SubQuiz questions={questions.slice(2,5)}/>
 
-        <button onClick={() => handleClick(4)} className="btn btn-dark">Logical</button>
+        <button className="btn btn-dark">Logical</button>
         <SubQuiz questions={questions.slice(3,5)}/>
 
-        <button onClick={() => handleClick(5)} className="btn btn-dark">Management</button>
+        <button className="btn btn-dark">Management</button>
         <SubQuiz questions={questions.slice(4,7)}/>
 
       </div>
