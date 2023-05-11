@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import SubQuiz from './SubQuiz';
+import {useNavigate} from 'react-router-dom'
 function Quiz() {
+
+  const navigate = useNavigate();
   const [questions,setQuestions] = useState([]);
   const fetchQuestions = async (num) => {
     const response = await fetch('http://localhost:5000/dashboard/questions/'+num,{
@@ -36,7 +39,6 @@ function Quiz() {
       },
       body: body
     });
-    navigate('/dashboard', {replace: true});
   }
  
   return (
@@ -46,19 +48,23 @@ function Quiz() {
         <SubQuiz questions={questions.slice(0,5)}/>
 
         <button className="btn btn-dark">Electrical</button>
-        <SubQuiz questions={questions.slice(5,7)}/>
+        <SubQuiz questions={questions.slice(5,10)}/>
 
         <button className="btn btn-dark">Mechnanical</button>
-        <SubQuiz questions={questions.slice(7,8)}/>
+        <SubQuiz questions={questions.slice(10,15)}/>
 
         <button className="btn btn-dark">Logical</button>
-        <SubQuiz questions={questions.slice(3,5)}/>
+        <SubQuiz questions={questions.slice(15,20)}/>
 
         <button className="btn btn-dark">Management</button>
-        <SubQuiz questions={questions.slice(4,7)}/>
+        <SubQuiz questions={questions.slice(20,25)}/>
 
       </div>
-      <button type='submit' className='btn btn-success' onClick={() =>{handleAnswerSubmit()}}>Finish Quiz</button>
+      <button type='submit' className='btn btn-success' 
+              onClick={() =>{
+                navigate('/dashboard', {replace: true});
+                handleAnswerSubmit()
+              }}>Finish Quiz</button>
     </div>
     
   );

@@ -27,7 +27,7 @@ const Navbar = () => {
       <ul>
         <li><Link to='/dashboard'></Link></li>
         {localStorage.user_email && <li> <a>{localStorage.user_email}</a></li>}
-        {auth.user && <li><button onClick={e => handleLogout(e)}>Logout</button></li>} 
+        {localStorage.token && <li><button onClick={e => handleLogout(e)}>Logout</button></li>} 
       </ul>
     </nav>
   )

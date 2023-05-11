@@ -39,9 +39,8 @@ const Register = () => {
         });
         const parseRes = await response.json();
         console.log(parseRes);
-
-        localStorage.setItem("token",parseRes.token);
         localStorage.setItem("user_email",user.email);
+        localStorage.setItem("token",parseRes.token);
         auth.login(email,password);
         navigate('/dashboard',{replace: true})
         console.log("Registered Successfully");
