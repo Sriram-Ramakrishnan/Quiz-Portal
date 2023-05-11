@@ -41,7 +41,7 @@ router.post('/questions/:id', async (req, res) => {
 });
   
   // PUT request to insert answers into the answers table
-  router.put('/answers', async (req, res) => {
+  router.put('/answers', authorization, async (req, res) => {
     const { email, answers } = req.body;
     try {
       const user  = await pool.query("SELECT * FROM users WHERE user_email = $1", [email]);
